@@ -21,7 +21,10 @@ steps:
       - '--platform'
       - 'managed'
       - '--port'
-      - '8080'
+      - '5000'
 
 images:
   - 'gcr.io/fleet-bus-442415-q5/flask'
+
+options:
+  logging: CLOUD_LOGGING_ONLY
