@@ -129,7 +129,9 @@ def get_processed_repo_data():
             monthly_closed_issues = {}
 
         all_repo_data[repo] = {
-          
+            "monthly_created_issues": monthly_created_issues,
+            "monthly_closed_issues": monthly_closed_issues,
+            "total_created_issues": len(created_issues_df),
             "total_closed_issues": len(closed_issues_df),
             "total_stars": repo_details.get("stargazers_count", 0),
             "total_forks": repo_details.get("forks_count", 0)
