@@ -103,6 +103,9 @@ def fetch_repo_details(repo_name, token):
     response = requests.get(repo_url, headers=headers)
     return response.json() if response.status_code == 200 else {}
 
+@app.route('/')
+def home():
+    return render_template('index.html')
 
 @app.route('/api/repo_data', methods=['GET'])
 def get_processed_repo_data():
